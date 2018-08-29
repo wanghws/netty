@@ -8,10 +8,6 @@ public class ServerHeartbeatHandler extends ChannelInboundHandlerAdapter {
     // 心跳丢失计数器
     private int counter;
 
-    public static Map<String, ChannelSession> getChannelGroup() {
-        return channelGroup;
-    }
-
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.close();
